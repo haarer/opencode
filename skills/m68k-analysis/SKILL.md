@@ -5,7 +5,7 @@ description: Analyze MC68331 CPU32 binaries
 # M68K Binary Analysis Skill
 
 ## Description
-Provides specialized instructions for analyzing MC68331 (CPU32) and other m68k binaries. Integrates with the cross-compilation toolchain at `/opt/toolchain/` for disassembly and analysis.
+Provides specialized instructions for analyzing MC68331 (CPU32) and other m68k binaries. Integrates with the cross-compilation toolchain at `/opt/toolchain-m68k-elf-current` for disassembly and analysis.
 
 ## Commands
 
@@ -29,7 +29,7 @@ Identifies function start/end using objdump control flow analysis.
 
 ### Direct toolchain commands
 ```bash
-export PATH=/opt/toolchain/bin:$PATH
+export PATH=/opt/toolchain-m68k-elf-current/bin:$PATH
 m68k-elf-objdump -d -m m68k:68000 <binary>
 m68k-elf-nm -n <binary>
 m68k-elf-readelf -r <binary>
