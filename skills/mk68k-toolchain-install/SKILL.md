@@ -28,20 +28,11 @@ Download m68k Toolchain binaries from github and install. this should work on mo
 
 ### install build dependencies
 ```bash
-apk add bash wget git 
-apk add wget
+apk add bash wget git build-base m4 texinfo bison flex gawk patch
+
 ```
 Install bash, wget, git, build-base needed for m68k toolchain retrieval and build
 
-### install wget
-```bash
-apk add wget
-```
-Install wget, needed to download from the internet
-
-### install git
-```bash
-apk add git
 ```
 Install git, needed to clone repositories from the internet
 ## Workflow
