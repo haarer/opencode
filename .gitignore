@@ -1,1 +1,4 @@
 workspace
+opencode-config/node_modules
+opencode-config/package-lock.json
+opencode-config/package.json

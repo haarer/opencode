@@ -11,9 +11,11 @@ if podman container exists $NAME; then
   exit 0
 else
   echo "first run"
+  mkdir -p opencode-config
+  mkdir -p workspace
   podman run -it \
     -v "$(pwd)/workspace:/workspace" \
-    -v "$(pwd)/skills:/root/.config/opencode/skills" \
+    -v "$(pwd)/opencode-config:/root/.config/opencode" \
     --name $NAME \
     ghcr.io/anomalyco/opencode:latest
   exit 0
