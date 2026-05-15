@@ -8,9 +8,8 @@
         "baseURL": "http://host.containers.internal:1234/v1"
       },
       "models": {
-        "google/gemma-3n-e4b": {
-          "name": "Gemma 3n-e4b (local)"
-        }
+        "google/gemma-3n-e4b": { "name": "Gemma 3n-e4b (local)" },
+        "codestral-22b-v0.1": { "name": "Codestral 22b v0.1 (local)" }
       }
     }
   },  
