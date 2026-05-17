@@ -9,10 +9,23 @@
       },
       "models": {
         "google/gemma-3n-e4b": { "name": "Gemma 3n-e4b (local)" },
-        "codestral-22b-v0.1": { "name": "Codestral 22b v0.1 (local)" }
+        "codestral-22b-v0.1": { "name": "Codestral 22b v0.1 (local)" },
+        "qwen/qwen3.6": { "name": "Qwen 3.6 (local)" }
+      }
+    },
+    
+    "lmstudio-schleppx": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "LM Studio (schleppx)",
+      "options": {
+        "baseURL": "http://schleppx:1234/v1"
+      },
+      "models": {
+        "qwen/qwen3.6-27b": { "name": "Qwen 3.6 27b(schleppx)" }
       }
     }
-  },  
+  },
+
   "mcp": {
     "twcmcp": {
       "type": "remote",

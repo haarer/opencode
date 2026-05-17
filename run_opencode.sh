@@ -16,6 +16,9 @@ else
   podman run -it \
     -v "$(pwd)/workspace:/workspace" \
     -v "$(pwd)/opencode-config:/root/.config/opencode" \
+    --device /dev/bus/usb \
+    --group-add keep-groups \
+    --security-opt label=disable \
     --name $NAME \
     ghcr.io/anomalyco/opencode:latest
   exit 0
