@@ -8,12 +8,17 @@
         "baseURL": "http://host.containers.internal:1234/v1"
       },
       "models": {
-        "google/gemma-3n-e4b": { "name": "Gemma 3n-e4b (local)" },
-        "codestral-22b-v0.1": { "name": "Codestral 22b v0.1 (local)" },
-        "qwen/qwen3.6": { "name": "Qwen 3.6 (local)" }
+        "google/gemma-3n-e4b": {
+          "name": "Gemma 3n-e4b (local)"
+        },
+        "codestral-22b-v0.1": {
+          "name": "Codestral 22b v0.1 (local)"
+        },
+        "qwen/qwen3.6": {
+          "name": "Qwen 3.6 (local)"
+        }
       }
     },
-    
     "lmstudio-schleppx": {
       "npm": "@ai-sdk/openai-compatible",
       "name": "LM Studio (schleppx)",
@@ -21,16 +26,29 @@
         "baseURL": "http://schleppx:1234/v1"
       },
       "models": {
-        "qwen/qwen3.6-27b": { "name": "Qwen 3.6 27b(schleppx)" }
+        "qwen/qwen3.6-27b": {
+          "name": "Qwen 3.6 27b(schleppx)"
+        }
       }
     }
   },
-
   "mcp": {
     "twcmcp": {
       "type": "remote",
       "url": "http://host.containers.internal:8000",
       "enabled": true
-    }
-  }
+    },
+     "cameo": {
+      "type": "local",
+      "command": ["/workspace/cameo-mcp-bridge/mcp-server/.venv/bin/python","-m", "cameo_mcp.server"],
+      "env": {
+        "CAMEO_BRIDGE_HOST": "host.containers.internal",
+        "CAMEO_BRIDGE_PORT": "18740"
+      }
+   }
+  },
+  "disabled_providers": [
+    "lmstudio",
+    "lmstudio-schleppx"
+  ]
 }
