@@ -23,15 +23,17 @@ else
   echo "first run"
   mkdir -p opencode-config
   mkdir -p workspace
-  podman run -it \
+  podman run  \
+    -p 4096:4096 \
     -v "$(pwd)/workspace:/workspace" \
     -v "$(pwd)/opencode-config:/root/.config/opencode" \
     -v /dev:/dev \
     --privileged \
     --group-add keep-groups \
-    --device /dev/bus/usb:/dev/bus/usb 
+    --device /dev/bus/usb:/dev/bus/usb \
     --security-opt label=disable \
     --name $NAME \
-    ghcr.io/anomalyco/opencode:latest
+    ghcr.io/anomalyco/opencode:latest serve --hostname 0.0.0.0 --port 4096
+
   exit 0
 fi
