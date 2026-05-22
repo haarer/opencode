@@ -33,7 +33,7 @@ else
     --device /dev/bus/usb:/dev/bus/usb \
     --security-opt label=disable \
     --name $NAME \
-    ghcr.io/anomalyco/opencode:latest serve --hostname 0.0.0.0 --port 4096
+    ghcr.io/anomalyco/opencode:1.14.48 serve --hostname 0.0.0.0 --port 4096
 
   exit 0
 fi
