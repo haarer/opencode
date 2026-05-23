@@ -36,18 +36,33 @@
     "twcmcp": {
       "type": "remote",
       "url": "http://host.containers.internal:8000",
-      "enabled": true
+      "enabled": false
     },
      "cameo": {
       "type": "local",
+      "enabled": false,
       "command": ["/workspace/cameo-mcp-bridge/mcp-server/.venv/bin/python","-m", "cameo_mcp.server"],
       "env": {
         "CAMEO_BRIDGE_HOST": "host.containers.internal",
         "CAMEO_BRIDGE_PORT": "18740"
       }
-   }
-  },
-  "disabled_providers": [
+    },
+    "saf-ontology": {
+      "type": "local",
+      "command": ["/workspace/SAF-Specification/tools/saf-mcp-server/.venv/bin/python", "-m", "saf_server.server"],
+      "environment": {
+        "SAF_DATA_DIR": "/workspace/SAF-Specification/src/_data",
+        "PYTHONPATH": "/workspace/SAF-Specification/tools/saf-mcp-server"
+      },
+      "enabled": false
+    },
+    "saf-ontology-remote": {
+      "type": "remote",
+      "url": "http://host.containers.internal:8001/sse",
+      "enabled": true
+    }
+   },
+   "disabled_providers": [
     "lmstudio",
     "lmstudio-schleppx"
   ]
