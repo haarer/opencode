@@ -62,7 +62,8 @@
       "enabled": true
     }
    },
-   "disabled_providers": [
+   "lsp": true,
+  "disabled_providers": [
     "lmstudio",
     "lmstudio-schleppx"
   ]
