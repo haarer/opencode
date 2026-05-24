@@ -25,7 +25,7 @@ else
     --privileged \
     --group-add keep-groups \
     --device /dev/bus/usb:/dev/bus/usb \
-    --security-opt label=disable \    
+    --security-opt label=disable \
     --name $NAME \
     ghcr.io/anomalyco/opencode:1.14.48
 
